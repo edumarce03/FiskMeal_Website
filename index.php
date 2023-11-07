@@ -477,7 +477,7 @@ if(isset($_POST['order'])){
 
 <!-- HACER PEDIDO-->
 
-
+<script src="bot/chatbot.js"></script>
 
 <!-- FOOTER  -->
 
@@ -515,20 +515,6 @@ if(isset($_POST['order'])){
 </section>
 
 <!-- FOOTER -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
