@@ -27,15 +27,15 @@ if(isset($_POST['add_product'])){
    $select_product->execute([$name]);
 
    if($select_product->rowCount() > 0){
-      $message[] = 'product name already exist!';
+      $message[] = 'Nombre del Producto ya existente';
    }else{
       if($image_size > 2000000){
-         $message[] = 'image size is too large!';
+         $message[] = '¡El tamaño de la imagen es demasiaodo grande!';
       }else{
          $insert_product = $conn->prepare("INSERT INTO `products`(name, price, image) VALUES(?,?,?)");
          $insert_product->execute([$name, $price, $image]);
          move_uploaded_file($image_tmp_name, $image_folder);
-         $message[] = 'new product added!';
+         $message[] = '¡Nuevo producto agregado';
       }
    }
 
